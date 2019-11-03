@@ -387,14 +387,155 @@ Wire Wire Line
 Wire Wire Line
 	1450 2950 1900 2950
 $Comp
-L Connector:USB_C_Receptacle J?
+L Connector:USB_C_Receptacle usb4085
 U 1 1 5DC19A8E
-P 7150 2750
-F 0 "J?" H 7257 4017 50  0000 C CNN
-F 1 "USB_C_Receptacle" H 7257 3926 50  0000 C CNN
-F 2 "" H 7300 2750 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 7300 2750 50  0001 C CNN
-	1    7150 2750
+P 8000 2050
+F 0 "usb4085" H 8107 3317 50  0000 C CNN
+F 1 "USB_C_Receptacle" H 8107 3226 50  0000 C CNN
+F 2 "" H 8150 2050 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 8150 2050 50  0001 C CNN
+F 4 "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=2ahUKEwjUk_ioq87lAhWIXsAKHeSVCawQFjACegQIBBAC&url=https%3A%2F%2Fgct.co%2Ffiles%2Fdrawings%2Fusb4085.pdf&usg=AOvVaw0d_r2qGDlz69vGlsB9YSmH" H 8000 2050 50  0001 C CNN "Schematic"
+	1    8000 2050
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DC23EBE
+P 10200 3300
+F 0 "#PWR?" H 10200 3050 50  0001 C CNN
+F 1 "GND" H 10205 3127 50  0000 C CNN
+F 2 "" H 10200 3300 50  0001 C CNN
+F 3 "" H 10200 3300 50  0001 C CNN
+	1    10200 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DC243E6
+P 9300 1050
+F 0 "#PWR?" H 9300 900 50  0001 C CNN
+F 1 "+5V" H 9315 1223 50  0000 C CNN
+F 2 "" H 9300 1050 50  0001 C CNN
+F 3 "" H 9300 1050 50  0001 C CNN
+	1    9300 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3650 8000 3650
+NoConn ~ 8600 2050
+NoConn ~ 8600 2150
+NoConn ~ 8600 2350
+NoConn ~ 8600 2450
+NoConn ~ 8600 2650
+NoConn ~ 8600 2750
+NoConn ~ 8600 2950
+NoConn ~ 8600 3050
+$Comp
+L Device:Polyfuse_Small F?
+U 1 1 5DC3186E
+P 9050 1050
+F 0 "F?" V 8845 1050 50  0000 C CNN
+F 1 "500mA" V 8936 1050 50  0000 C CNN
+F 2 "" H 9100 850 50  0001 L CNN
+F 3 "~" H 9050 1050 50  0001 C CNN
+	1    9050 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5DC34FDE
+P 8750 1050
+F 0 "#PWR?" H 8750 900 50  0001 C CNN
+F 1 "VCC" H 8767 1223 50  0000 C CNN
+F 2 "" H 8750 1050 50  0001 C CNN
+F 3 "" H 8750 1050 50  0001 C CNN
+	1    8750 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 1050 8750 1050
+Connection ~ 8750 1050
+Wire Wire Line
+	8750 1050 8950 1050
+Wire Wire Line
+	9150 1050 9300 1050
+$Comp
+L Device:R_Small R?
+U 1 1 5DC39E1D
+P 9500 1250
+F 0 "R?" V 9304 1250 50  0000 C CNN
+F 1 "5k" V 9395 1250 50  0000 C CNN
+F 2 "" H 9500 1250 50  0001 C CNN
+F 3 "~" H 9500 1250 50  0001 C CNN
+	1    9500 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5DC3B316
+P 9050 1350
+F 0 "R?" V 9246 1350 50  0000 C CNN
+F 1 "5k" V 9155 1350 50  0000 C TNN
+F 2 "" H 9050 1350 50  0001 C CNN
+F 3 "~" H 9050 1350 50  0001 C CNN
+	1    9050 1350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8600 1250 9400 1250
+Wire Wire Line
+	8600 1350 8950 1350
+Wire Wire Line
+	9150 1350 9950 1350
+Wire Wire Line
+	9950 1350 9950 3300
+Wire Wire Line
+	9950 3300 10200 3300
+Wire Wire Line
+	9600 1250 10200 1250
+Wire Wire Line
+	10200 1250 10200 3300
+Connection ~ 10200 3300
+Wire Wire Line
+	8600 1550 9050 1550
+Wire Wire Line
+	9050 1550 9050 1600
+Wire Wire Line
+	9050 1600 9250 1600
+Wire Wire Line
+	8600 1650 9050 1650
+Wire Wire Line
+	9050 1650 9050 1600
+Connection ~ 9050 1600
+Wire Wire Line
+	8600 1750 9050 1750
+Wire Wire Line
+	8600 1850 9050 1850
+Wire Wire Line
+	9050 1750 9050 1800
+Wire Wire Line
+	9050 1800 9250 1800
+Connection ~ 9050 1800
+Wire Wire Line
+	9050 1800 9050 1850
+Text GLabel 9250 1600 2    50   Input ~ 0
+D-
+Text GLabel 9250 1800 2    50   Input ~ 0
+D+
+NoConn ~ 8600 3250
+NoConn ~ 8600 3350
+$Comp
+L power:GND #PWR?
+U 1 1 5DC520D1
+P 8150 3650
+F 0 "#PWR?" H 8150 3400 50  0001 C CNN
+F 1 "GND" H 8155 3477 50  0000 C CNN
+F 2 "" H 8150 3650 50  0001 C CNN
+F 3 "" H 8150 3650 50  0001 C CNN
+	1    8150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 3650 8150 3650
+Connection ~ 8000 3650
 $EndSCHEMATC
